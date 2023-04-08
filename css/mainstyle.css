@@ -250,7 +250,8 @@ justify-content: space-between;
 .card {
     width: 300px;
     background-color: var(--bgColor-2);
-    border: 20xp;
+    border-: 20xp;
+    border-radius: 20px;
     padding: 1.3rem;
     text-align: center;
 }
@@ -353,7 +354,12 @@ footer .content-footer .end {
 html {
     font-size: 13px;
 }
+/*.home .content-text {
 
+    padding: 2rem;
+
+}
+*/
 .home .container-images {
     display: none;
 }
@@ -438,6 +444,50 @@ nav ul li {
     margin: 33px;
 }
 
+.about .container-images{
+    display: none;
+}
+.about .content-text{
+    width: 100%;
+}
+.services{
+    width: 100%;
+}
+.box {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+   
+}
+.skills .container-images{
+    display: none;
+}
 
+.skills .container-skills{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.content-skills {
+    margin-top: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+.skill{
+    width: 80px;
+    height: 80px;
+}
+
+footer .content-footer {
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+ 
+}
+footer .content-footer p{
+width: 100%;
+}
 }
 
