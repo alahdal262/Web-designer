@@ -344,7 +344,7 @@ footer .content-footer .end {
 .................... Mobile 
 ........................................*/
 
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 677px) {
     :root {
         --padding: 1.5rem;
 
