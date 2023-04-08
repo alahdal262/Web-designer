@@ -88,6 +88,9 @@ nav ul li a {
 nav ul li a:hover {
     color: var(--premaryColor);
 }
+#menu {
+    display: none;
+}
 
 /*......................
 ......... Home .........
@@ -151,6 +154,9 @@ nav ul li a:hover {
 
 .social {
     margin-top: 3.5rem;
+}
+.social a{
+    text-decoration: none;
 }
 
 .social img {
@@ -334,6 +340,104 @@ footer .content-footer .end {
 }
 
 
+
+/*........................................
+.................... Mobile 
+........................................*/
+
+@media screen and (max-width: 677px) {
+    :root {
+        --padding: 1.5rem;
+
+    }
+
+html {
+    font-size: 13px;
+}
+
+.home .container-images {
+    display: none;
+}
+#menu {
+    position: relative;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    user-select: none;
+}
+#menu {
+    display: block;
+}
+
+#menu span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  background-color: var(--lightColor);
+  border-radius: 6px;
+  transform-origin: 0 0;
+  transition: 0.4s;
+  margin-bottom: 5px;
+
+}
+nav {
+    position: fiexd;
+    right: 0;
+    left: 0;
+    top: 0;
+    height: 82px;
+    padding-top: 0;
+    background-color: var(--bgColor);
+    border-bottom: 1px solid var(--bgColor-2);
+    z-index: 100;
+}
+nav > a{
+    display: none;
+}
+
+nav ul {
+    display: none;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--bgColor);
+    
+}
+
+nav ul.is-active{
+    display: block;
+    
+}
+
+#menu.is-active span:nth-child(1) {
+transform: translate(0px, -2px) rotate(45deg);
+}
+#menu.is-active span:nth-child(2) {
+    opacity: 0;
+    transform: translate(15px);
+}
+#menu.is-active span:nth-child(3) {
+    transform: translate(-3px, 3px) rotate(-45deg);
+    }
+    
+    #menu.is-active span:nth-child(4) {
+        opacity: 0;
+        transform: translate(15px);
+    }
+#menu.is-active span{
+    background-color: var(--premaryColor);
+}
+
+nav ul li {
+    display: block;
+    text-align: center;
+    margin: 33px;
+=======
 /*......................
 ......... Mobile Section .........
 ......................*/
@@ -364,10 +468,13 @@ nav {
 
 nav > a {
     display: none;
+
 }
 
 nav ul {
     display: none;
 }
 
+
 }
+
