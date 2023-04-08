@@ -143,6 +143,8 @@ nav ul li a:hover {
 .content-text {
     position: relative;
     bottom: 20%;
+    padding-top: 82px;
+    padding-right: 10px;
 }
 
 
@@ -192,7 +194,9 @@ nav ul li a:hover {
 }
 
 .home .container-images:hover .shape {
-    bottom: 40px;
+    bottom: 33px;
+    padding: auto;
+
 }
 
 .home .container-images:hover .pic {
@@ -227,6 +231,8 @@ nav ul li a:hover {
 
 .about .content-text {
 width: 35%;
+padding-top: 20px;
+
 }
 
 /*......................
@@ -250,8 +256,8 @@ justify-content: space-between;
 .card {
     width: 300px;
     background-color: var(--bgColor-2);
-    border-: 20xp;
-    border-radius: 20px;
+    border: 20xp;
+    border-radius: 15px;
     padding: 1.3rem;
     text-align: center;
 }
@@ -286,6 +292,7 @@ justify-content: space-between;
 .skills .container-images img {
     width: 90%;
 }
+
 
 .skills .container-skills {
     width: 70%;
@@ -346,7 +353,7 @@ footer .content-footer .end {
 .................... Mobile 
 ........................................*/
 
-@media screen and (max-width: 677px) {
+@media screen and (max-width: 575px) {
     :root {
         --padding: 1.5rem;
 
@@ -355,15 +362,15 @@ footer .content-footer .end {
 html {
     font-size: 13px;
 }
-/*.home .content-text {
 
-    padding: 2rem;
-
-}
-*/
 .home .container-images {
     display: none;
 }
+
+.home {
+    margin-bottom: -230px;
+}
+
 #menu {
     position: relative;
     appearance: none;
@@ -443,42 +450,6 @@ nav ul li {
     display: block;
     text-align: center;
     margin: 33px;
-=======
-/*......................
-......... Mobile Section .........
-......................*/
-
-@media screen and (max-width: 575px){
-    :root {
-        --padding: 1.5rem; 
-    }
-
-html {
-        font-size: 13px;
-    }
-
-.home .container-images{
-    display:none;
-}
-
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 82px;
-    padding-top: 0;
-    background-color: var(--bgColor);
-    border-bottom: 1px solid var(--bgColor-2)
-}
-
-nav > a {
-    display: none;
-
-}
-
-nav ul {
-    display: none;
 }
 
 .about .container-images{
@@ -486,6 +457,7 @@ nav ul {
 }
 .about .content-text{
     width: 100%;
+    padding-top: 10px;
 }
 .services{
     width: 100%;
@@ -528,3 +500,456 @@ width: 100%;
 }
 }
 
+/*........................................
+.................... mobile  Horizontal
+........................................*/
+
+@media screen and (min-width: 576px)and (max-width: 767px) {
+    :root {
+        --padding: 1.5rem;
+
+    }
+
+html {
+    font-size: 13px;
+}
+
+.home .container-images {
+    display: none;
+}
+
+.home {
+    margin-bottom: -230px;
+}
+
+
+
+#menu {
+    position: relative;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    user-select: none;
+}
+#menu {
+    display: block;
+}
+
+#menu span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  background-color: var(--lightColor);
+  border-radius: 6px;
+  transform-origin: 0 0;
+  transition: 0.4s;
+  margin-bottom: 5px;
+
+}
+nav {
+    position: fiexd;
+    right: 0;
+    left: 0;
+    top: 0;
+    height: 82px;
+    padding-top: 0;
+    background-color: var(--bgColor);
+    border-bottom: 1px solid var(--bgColor-2);
+    z-index: 100;
+}
+nav > a{
+    display: none;
+}
+
+nav ul {
+    display: none;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--bgColor);
+    
+}
+
+nav ul.is-active{
+    display: block;
+    
+}
+
+#menu.is-active span:nth-child(1) {
+transform: translate(0px, -2px) rotate(45deg);
+}
+#menu.is-active span:nth-child(2) {
+    opacity: 0;
+    transform: translate(15px);
+}
+#menu.is-active span:nth-child(3) {
+    transform: translate(-3px, 3px) rotate(-45deg);
+    }
+    
+    #menu.is-active span:nth-child(4) {
+        opacity: 0;
+        transform: translate(15px);
+    }
+#menu.is-active span{
+    background-color: var(--premaryColor);
+}
+
+nav ul li {
+    display: block;
+    text-align: center;
+    margin: 33px;
+}
+
+.about .container-images{
+    display: none;
+}
+.about .content-text{
+    width: 100%;
+    padding-top: 10px;
+
+}
+.services{
+    width: 100%;
+}
+.box {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+   
+}
+.skills .container-images{
+    display: none;
+}
+
+.skills .container-skills{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.content-skills {
+    margin-top: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+.skill{
+    width: 80px;
+    height: 80px;
+}
+
+footer .content-footer {
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+ 
+}
+footer .content-footer p{
+width: 100%;
+}
+}
+
+/*........................................
+.................... tablet Vertical
+........................................*/
+
+@media screen and (min-width: 768px)and (max-width: 991px) {
+    :root {
+        --padding: 1.5rem;
+
+    }
+
+    html {
+        font-size: 13px;
+    }
+    
+    .home .container-images {
+        display: none;
+    }
+    
+    .home {
+        margin-bottom: -230px;
+    }
+    
+    #menu {
+        position: relative;
+        appearance: none;
+        border: none;
+        outline: none;
+        background: none;
+        cursor: pointer;
+        user-select: none;
+    }
+    #menu {
+        display: block;
+    }
+    
+    #menu span {
+      display: block;
+      width: 33px;
+      height: 4px;
+      background-color: var(--lightColor);
+      border-radius: 6px;
+      transform-origin: 0 0;
+      transition: 0.4s;
+      margin-bottom: 5px;
+    
+    }
+    nav {
+        position: fiexd;
+        right: 0;
+        left: 0;
+        top: 0;
+        height: 82px;
+        padding-top: 0;
+        background-color: var(--bgColor);
+        border-bottom: 1px solid var(--bgColor-2);
+        z-index: 100;
+    }
+    nav > a{
+        display: none;
+    }
+    
+    nav ul {
+        display: none;
+        position: fixed;
+        right: 0;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: var(--bgColor);
+        
+    }
+    
+    nav ul.is-active{
+        display: block;
+        
+    }
+    
+    #menu.is-active span:nth-child(1) {
+    transform: translate(0px, -2px) rotate(45deg);
+    }
+    #menu.is-active span:nth-child(2) {
+        opacity: 0;
+        transform: translate(15px);
+    }
+    #menu.is-active span:nth-child(3) {
+        transform: translate(-3px, 3px) rotate(-45deg);
+        }
+        
+        #menu.is-active span:nth-child(4) {
+            opacity: 0;
+            transform: translate(15px);
+        }
+    #menu.is-active span{
+        background-color: var(--premaryColor);
+    }
+    
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 33px;
+    }
+    
+    .about .container-images{
+        display: none;
+    }
+    .about .content-text{
+        width: 100%;
+        padding-top: 10px;
+    }
+    .services{
+        width: 100%;
+    }
+    .box {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+       
+    }
+    .skills .container-images{
+        display: none;
+    }
+    
+    .skills .container-skills{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .content-skills {
+        margin-top: 2rem;
+        align-items: center;
+        justify-content: center;
+    }
+    .skill{
+        width: 80px;
+        height: 80px;
+    }
+    
+    footer .content-footer {
+            width: 100%;
+            align-content: center;
+            justify-content: center;
+     
+    }
+    footer .content-footer p{
+    width: 100%;
+    }
+    }
+
+/*........................................
+.................... tablet Horizontal
+........................................*/
+
+@media screen and (min-width: 992px)and (max-width: 1279px) {
+    :root {
+        --padding: 1.5rem;
+
+    }
+
+    html {
+        font-size: 13px;
+    }
+    
+    .home .container-images img {
+        height: 80%;
+        width: auto;
+      
+    }
+    
+ .home .container-images .shape {
+    height: 67%;
+    width: auto;
+ }
+    
+    #menu {
+        position: relative;
+        appearance: none;
+        border: none;
+        outline: none;
+        background: none;
+        cursor: pointer;
+        user-select: none;
+    }
+    #menu {
+        display: block;
+    }
+    
+    #menu span {
+      display: block;
+      width: 33px;
+      height: 4px;
+      background-color: var(--lightColor);
+      border-radius: 6px;
+      transform-origin: 0 0;
+      transition: 0.4s;
+      margin-bottom: 5px;
+    
+    }
+    nav {
+        position: fiexd;
+        right: 0;
+        left: 0;
+        top: 0;
+        height: 82px;
+        padding-top: 0;
+        background-color: var(--bgColor);
+        border-bottom: 1px solid var(--bgColor-2);
+        z-index: 100;
+    }
+    nav > a{
+        display: none;
+    }
+    
+    nav ul {
+        display: none;
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 30%;
+        background-color: var(--bgColor);
+        
+    }
+    
+    nav ul.is-active{
+        display: block;
+        
+    }
+    
+    #menu.is-active span:nth-child(1) {
+    transform: translate(0px, -2px) rotate(45deg);
+    }
+    #menu.is-active span:nth-child(2) {
+        opacity: 0;
+        transform: translate(15px);
+    }
+    #menu.is-active span:nth-child(3) {
+        transform: translate(-3px, 3px) rotate(-45deg);
+        }
+        
+        #menu.is-active span:nth-child(4) {
+            opacity: 0;
+            transform: translate(15px);
+        }
+    #menu.is-active span{
+        background-color: var(--premaryColor);
+    }
+    
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 33px;
+    }
+    
+
+    .about .content-text{
+        width: 100%;
+        padding-top: 10px;
+    }
+    .services{
+        width: 100%;
+    }
+    .box {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+       
+    }
+
+    
+    .skills .container-skills{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .content-skills {
+        margin-top: 2rem;
+        align-items: center;
+        justify-content: center;
+    }
+    .skill{
+        width: 80px;
+        height: 80px;
+    }
+    
+    footer .content-footer {
+            width: 100%;
+            align-content: center;
+            justify-content: center;
+     
+    }
+    footer .content-footer p{
+    width: 100%;
+    }
+    }
